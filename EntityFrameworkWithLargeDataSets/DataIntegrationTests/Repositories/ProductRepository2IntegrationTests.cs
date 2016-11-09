@@ -47,7 +47,7 @@
             Product result = productRepo.GetProductWithDetailedInformation(productId);
 
             // assert
-    //      Assert.IsNotNull(result);
+          Assert.IsNotNull(result);
         }
     }
 }

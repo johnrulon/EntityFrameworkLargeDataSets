@@ -17,7 +17,7 @@
             this.context.Configuration.ProxyCreationEnabled = false;
 
             var foundProduct = this.context
-                .Products   
+                .Products
 
                 .Include(product => product.ProductReviews)
                 .Include(product => product.ProductVendors)
@@ -41,7 +41,7 @@
 
             var foundProduct = this.context
                 .Products
-                
+
                 .Include(product => product.ProductReviews)
 
                 .Include(product => product.ProductVendors)

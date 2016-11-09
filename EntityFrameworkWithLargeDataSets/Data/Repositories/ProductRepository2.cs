@@ -50,7 +50,7 @@
 
             return foundProduct;
         }
-        
+
         // Returns a Product with Reviews, Vendors, Inventories, Materials, and OrderDetails
         public Product GetProductWithStandardInformation(int productId)
         {
@@ -93,7 +93,7 @@
                     .Collection(product => product.PurchaseOrderDetails)
                     .Query()
                     .Load();
-                
+
                 // no data
                 this.context.Entry(foundProduct)
                     .Collection(product => product.ShoppingCartItems)
@@ -163,7 +163,7 @@
                     .Include(sop => sop.SpecialOffer)
                     .Include(sop => sop.SalesOrderDetails)
                     .Load();
-                
+
                 this.context.Entry(foundProduct)
                     .Collection(product => product.WorkOrders)
                     .Query()
@@ -175,16 +175,15 @@
                 this.context.Entry(foundProduct)
                     .Collection(product => product.ProductCostHistories)
                     .Query();
-                
+
                 this.context.Entry(foundProduct)
                     .Collection(product => product.ProductListPriceHistories)
                     .Query();
-                
+
                 this.context.Entry(foundProduct)
                     .Collection(product => product.TransactionHistories)
                     .Query()
                     .Load();
-
 
             }
 
