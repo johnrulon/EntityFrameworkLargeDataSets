@@ -13,7 +13,7 @@
 		{
 			// arrange
 			int productId = 316; // blade
-			var productRepo = new ProductRepository();
+			var productRepo = new ProductRepository2();
 
 			// act
 			Product result = productRepo.GetProduct(productId);
